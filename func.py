@@ -4,3 +4,7 @@ def func():
 
 def untested():
     return "This is untested code"
+
+
+def add_even_more_untested():
+    return "more"
