@@ -5,3 +5,5 @@ def func():
 def untested():
     return "This is untested code"
 
+def blah_test_this():
+    return "blue blue"
