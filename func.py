@@ -10,5 +10,3 @@ def add_even_more_untested():
     return "more"
 
 
-def add_another_untested():
-    return "this"
