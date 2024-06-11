@@ -1,1 +1,2 @@
-func.py @michelletran-codecov:component:funccomponent
+func.py @michelletran-codecov
+func.py @codecov:component:funccomp
