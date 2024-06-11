@@ -1,2 +1,4 @@
 func.py @michelletran-codecov
 func.py @codecov:component:funccomp
+test_sample.py @codecov:component:testcomp
+test_sample.py @michelletran-codecov
