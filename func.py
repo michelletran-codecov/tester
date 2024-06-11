@@ -14,3 +14,8 @@ def more_untested():
 def even_more_untested():
     return "another line"
 
+
+def a_new_func():
+    """ A new function"""
+    return "new functionality"
+
