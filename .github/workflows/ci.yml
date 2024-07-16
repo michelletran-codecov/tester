@@ -17,7 +17,7 @@ jobs:
       - name: Install CLI
         run: pip install --no-cache-dir codecov-cli
       - name: Run tests and collect coverage
-        run: pytest --cov .
+        run: COVERAGE_CORE=sysmon python -m pytest --cov=./ --junitxml=junit.xml
       - name: Run Startup Staging
         run: |
           codecovcli -u ${{ secrets.CODECOV_STAGING_URL }} create-commit -t ${{ secrets.CODECOV_ORG_TOKEN_STAGING }} --fail-on-error
