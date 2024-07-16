@@ -24,3 +24,11 @@ jobs:
           url: ${{ secrets.CODECOV_URL }}
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      - name: Run Startup Staging
+        run: |
+          codecovcli -u ${{ secrets.CODECOV_STAGING_URL }} create-commit -t ${{ secrets.CODECOV_ORG_TOKEN_STAGING }} --fail-on-error
+          codecovcli -u ${{ secrets.CODECOV_STAGING_URL }} create-report -t ${{ secrets.CODECOV_ORG_TOKEN_STAGING }} --fail-on-error
+      - name: upload using codecovcli staging
+        if: ${{ !github.event.pull_request.head.repo.fork }}
+        run: |
+          make test_env.upload CODECOV_UPLOAD_TOKEN=${{ secrets.CODECOV_ORG_TOKEN_STAGING }} CODECOV_URL=${{ secrets.CODECOV_STAGING_URL }}
