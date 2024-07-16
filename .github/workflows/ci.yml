@@ -20,9 +20,9 @@ jobs:
         run: COVERAGE_CORE=sysmon python -m pytest --cov=./ --junitxml=junit.xml
       - name: Run Startup Staging
         run: |
-          codecovcli -u ${{ secrets.CODECOV_STAGING_URL }} create-commit -t ${{ secrets.CODECOV_ORG_TOKEN_STAGING }} --fail-on-error
-          codecovcli -u ${{ secrets.CODECOV_STAGING_URL }} create-report -t ${{ secrets.CODECOV_ORG_TOKEN_STAGING }} --fail-on-error
+          CODECOV_TOKEN=${{ secrets.CODECOV_ORG_TOKEN_STAGING }} codecovcli -u ${{ secrets.CODECOV_STAGING_URL }} create-commit --fail-on-error
+          CODECOV_TOKEN=${{ secrets.CODECOV_ORG_TOKEN_STAGING }} codecovcli -u ${{ secrets.CODECOV_STAGING_URL }} create-report --fail-on-error
       - name: upload using codecovcli staging
         if: ${{ !github.event.pull_request.head.repo.fork }}
         run: |
-          codecovcli -u ${{ secrets.CODECOV_STAGING_URL }} do-upload -t ${{ secrets.CODECOV_ORG_TOKEN_STAGING }} --fail-on-error
+          CODECOV_TOKEN=${{ secrets.CODECOV_ORG_TOKEN_STAGING }} codecovcli -u ${{ secrets.CODECOV_STAGING_URL }} do-upload --fail-on-error
