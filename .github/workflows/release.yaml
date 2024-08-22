@@ -1,0 +1,66 @@
+name: New Sentry Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read  # This is required for actions/checkout
+
+jobs:
+  release:
+   runs-on: ubuntu-latest
+   env:
+     SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+     SENTRY_DEPLOY_ENVIRONMENT: ${{ secrets.SENTRY_DEPLOY_ENVIRONMENT }}
+     # Specifies custom Sentry Endpoint to send release information to
+     # Defaults to https://sentry.io
+     SENTRY_URL: ${{ secrets.SENTRY_URL }}
+     # The organization name for the org that we want to send release info to
+     SENTRY_ORG_ID: ${{ secrets.SENTRY_ORG_ID }}
+
+   steps:
+    - uses: actions/checkout@v1.0.0
+
+    - name: Install OIDC Client from Core Package
+      run: npm install @actions/core@1.6.0 @actions/http-client
+
+    - name: Get Id Token
+      uses: actions/github-script@v6
+      id: idtoken
+      env:
+        SENTRY_URL: ${{ secrets.SENTRY_URL }}
+      with:
+        script: |
+          const actions_core = require('@actions/core')
+          let id_token = await actions_core.getIDToken(process.env.SENTRY_URL)
+          actions_core.setOutput('token', id_token)
+
+    - name: Create new Sentry release and deploy to Heroku
+      shell: bash
+      env:
+        SENTRY_URL: ${{ secrets.SENTRY_URL }}
+        SENTRY_ORG_ID: ${{ secrets.SENTRY_ORG_ID }}
+        GITHUB_OIDC_TOKEN: ${{ steps.idtoken.outputs.token }}
+      run: |
+        # Install Sentry CLI
+        curl -sL https://sentry.io/get-cli/ | bash
+        
+        # Get the Auth Token from Sentry's API Endpoint
+        sentry_access_token=`curl -X POST "$SENTRY_URL/oauth/token/" -H 'Accept-Encoding: gzip, deflate, br, zstd' \
+          -H 'Content-Type: application/json; charset=utf-8' -H 'Accept: application/json' \
+          -d "{
+            \"grant_type\": \"urn:ietf:params:oauth:grant-type:token-exchange\",
+            \"resource\": \"$SENTRY_URL/api/0/organizations/$SENTRY_ORG_ID\",
+            \"subject_token\": \"$GITHUB_OIDC_TOKEN\",
+            \"subject_token_type\": \"urn:ietf:params:oauth:token-type:id_token\"
+          }" | jq -r '.access_token'`
+
+        # Expose the scoped auth token se for release API
+        export SENTRY_AUTH_TOKEN=$sentry_access_token
+        
+        # Create new Sentry release
+        export SENTRY_RELEASE=$(sentry-cli releases propose-version)
+        sentry-cli releases new -p $SENTRY_PROJECT $SENTRY_RELEASE
