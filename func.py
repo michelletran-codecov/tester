@@ -9,5 +9,3 @@ def untested():
 
 def more_untested():
     return "hello world"
-
-
