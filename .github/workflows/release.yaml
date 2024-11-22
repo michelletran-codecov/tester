@@ -48,7 +48,7 @@ jobs:
         # Install Sentry CLI
         curl -sL https://sentry.io/get-cli/ | bash
         
-        # Get the Auth Token from Sentry's API Endpoint
+        # Get the Auth Token from Sentry's API Enndpoint
         sentry_access_token=`curl -X POST "$SENTRY_URL/oauth/token/" -H 'Accept-Encoding: gzip, deflate, br, zstd' \
           -H 'Content-Type: application/json; charset=utf-8' -H 'Accept: application/json' \
           -d "{
