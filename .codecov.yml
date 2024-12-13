@@ -13,6 +13,7 @@ component_management:
     statuses:
       - type: project
         target: auto
+
   individual_components:
     - component_id: python_code
       name: PythonCode
@@ -22,3 +23,504 @@ component_management:
       name: OtherCode
       paths:
         - "!**.py"
+
+flags:
+  1:
+    carryforward: true
+    paths:
+      - app/1/*
+
+  2:
+    carryforward: true
+    paths:
+      - app/2/*
+
+  3:
+    carryforward: true
+    paths:
+      - app/3/*
+
+  4:
+    carryforward: true
+    paths:
+      - app/4/*
+
+  5:
+    carryforward: true
+    paths:
+      - app/5/*
+
+  6:
+    carryforward: true
+    paths:
+      - app/6/*
+
+  7:
+    carryforward: true
+    paths:
+      - app/7/*
+
+  8:
+    carryforward: true
+    paths:
+      - app/8/*
+
+  9:
+    carryforward: true
+    paths:
+      - app/9/*
+
+  10:
+    carryforward: true
+    paths:
+      - app/10/*
+
+  11:
+    carryforward: true
+    paths:
+      - app/11/*
+
+  12:
+    carryforward: true
+    paths:
+      - app/12/*
+
+  13:
+    carryforward: true
+    paths:
+      - app/13/*
+
+  14:
+    carryforward: true
+    paths:
+      - app/14/*
+
+  15:
+    carryforward: true
+    paths:
+      - app/15/*
+
+  16:
+    carryforward: true
+    paths:
+      - app/16/*
+
+  17:
+    carryforward: true
+    paths:
+      - app/17/*
+
+  18:
+    carryforward: true
+    paths:
+      - app/18/*
+
+  19:
+    carryforward: true
+    paths:
+      - app/19/*
+
+  20:
+    carryforward: true
+    paths:
+      - app/20/*
+
+  21:
+    carryforward: true
+    paths:
+      - app/21/*
+
+  22:
+    carryforward: true
+    paths:
+      - app/22/*
+
+  23:
+    carryforward: true
+    paths:
+      - app/23/*
+
+  24:
+    carryforward: true
+    paths:
+      - app/24/*
+
+  25:
+    carryforward: true
+    paths:
+      - app/25/*
+
+  26:
+    carryforward: true
+    paths:
+      - app/26/*
+
+  27:
+    carryforward: true
+    paths:
+      - app/27/*
+
+  28:
+    carryforward: true
+    paths:
+      - app/28/*
+
+  29:
+    carryforward: true
+    paths:
+      - app/29/*
+
+  30:
+    carryforward: true
+    paths:
+      - app/30/*
+
+  31:
+    carryforward: true
+    paths:
+      - app/31/*
+
+  32:
+    carryforward: true
+    paths:
+      - app/32/*
+
+  33:
+    carryforward: true
+    paths:
+      - app/33/*
+
+  34:
+    carryforward: true
+    paths:
+      - app/34/*
+
+  35:
+    carryforward: true
+    paths:
+      - app/35/*
+
+  36:
+    carryforward: true
+    paths:
+      - app/36/*
+
+  37:
+    carryforward: true
+    paths:
+      - app/37/*
+
+  38:
+    carryforward: true
+    paths:
+      - app/38/*
+
+  39:
+    carryforward: true
+    paths:
+      - app/39/*
+
+  40:
+    carryforward: true
+    paths:
+      - app/40/*
+
+  41:
+    carryforward: true
+    paths:
+      - app/41/*
+
+  42:
+    carryforward: true
+    paths:
+      - app/42/*
+
+  43:
+    carryforward: true
+    paths:
+      - app/43/*
+
+  44:
+    carryforward: true
+    paths:
+      - app/44/*
+
+  45:
+    carryforward: true
+    paths:
+      - app/45/*
+
+  46:
+    carryforward: true
+    paths:
+      - app/46/*
+
+  47:
+    carryforward: true
+    paths:
+      - app/47/*
+
+  48:
+    carryforward: true
+    paths:
+      - app/48/*
+
+  49:
+    carryforward: true
+    paths:
+      - app/49/*
+
+  50:
+    carryforward: true
+    paths:
+      - app/50/*
+
+  51:
+    carryforward: true
+    paths:
+      - app/51/*
+
+  52:
+    carryforward: true
+    paths:
+      - app/52/*
+
+  53:
+    carryforward: true
+    paths:
+      - app/53/*
+
+  54:
+    carryforward: true
+    paths:
+      - app/54/*
+
+  55:
+    carryforward: true
+    paths:
+      - app/55/*
+
+  56:
+    carryforward: true
+    paths:
+      - app/56/*
+
+  57:
+    carryforward: true
+    paths:
+      - app/57/*
+
+  58:
+    carryforward: true
+    paths:
+      - app/58/*
+
+  59:
+    carryforward: true
+    paths:
+      - app/59/*
+
+  60:
+    carryforward: true
+    paths:
+      - app/60/*
+
+  61:
+    carryforward: true
+    paths:
+      - app/61/*
+
+  62:
+    carryforward: true
+    paths:
+      - app/62/*
+
+  63:
+    carryforward: true
+    paths:
+      - app/63/*
+
+  64:
+    carryforward: true
+    paths:
+      - app/64/*
+
+  65:
+    carryforward: true
+    paths:
+      - app/65/*
+
+  66:
+    carryforward: true
+    paths:
+      - app/66/*
+
+  67:
+    carryforward: true
+    paths:
+      - app/67/*
+
+  68:
+    carryforward: true
+    paths:
+      - app/68/*
+
+  69:
+    carryforward: true
+    paths:
+      - app/69/*
+
+  70:
+    carryforward: true
+    paths:
+      - app/70/*
+
+  71:
+    carryforward: true
+    paths:
+      - app/71/*
+
+  72:
+    carryforward: true
+    paths:
+      - app/72/*
+
+  73:
+    carryforward: true
+    paths:
+      - app/73/*
+
+  74:
+    carryforward: true
+    paths:
+      - app/74/*
+
+  75:
+    carryforward: true
+    paths:
+      - app/75/*
+
+  76:
+    carryforward: true
+    paths:
+      - app/76/*
+
+  77:
+    carryforward: true
+    paths:
+      - app/77/*
+
+  78:
+    carryforward: true
+    paths:
+      - app/78/*
+
+  79:
+    carryforward: true
+    paths:
+      - app/79/*
+
+  80:
+    carryforward: true
+    paths:
+      - app/80/*
+
+  81:
+    carryforward: true
+    paths:
+      - app/81/*
+
+  82:
+    carryforward: true
+    paths:
+      - app/82/*
+
+  83:
+    carryforward: true
+    paths:
+      - app/83/*
+
+  84:
+    carryforward: true
+    paths:
+      - app/84/*
+
+  85:
+    carryforward: true
+    paths:
+      - app/85/*
+
+  86:
+    carryforward: true
+    paths:
+      - app/86/*
+
+  87:
+    carryforward: true
+    paths:
+      - app/87/*
+
+  88:
+    carryforward: true
+    paths:
+      - app/88/*
+
+  89:
+    carryforward: true
+    paths:
+      - app/89/*
+
+  90:
+    carryforward: true
+    paths:
+      - app/90/*
+
+  91:
+    carryforward: true
+    paths:
+      - app/91/*
+
+  92:
+    carryforward: true
+    paths:
+      - app/92/*
+
+  93:
+    carryforward: true
+    paths:
+      - app/93/*
+
+  94:
+    carryforward: true
+    paths:
+      - app/94/*
+
+  95:
+    carryforward: true
+    paths:
+      - app/95/*
+
+  96:
+    carryforward: true
+    paths:
+      - app/96/*
+
+  97:
+    carryforward: true
+    paths:
+      - app/97/*
+
+  98:
+    carryforward: true
+    paths:
+      - app/98/*
+
+  99:
+    carryforward: true
+    paths:
+      - app/99/*
+
+  100:
+    carryforward: true
+    paths:
+      - app/100/*
