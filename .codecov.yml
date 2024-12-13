@@ -13,6 +13,7 @@ component_management:
     statuses:
       - type: project
         target: auto
+
   individual_components:
     - component_id: python_code
       name: PythonCode
@@ -22,3 +23,505 @@ component_management:
       name: OtherCode
       paths:
         - "!**.py"
+
+flags:
+
+  flag_1:
+    carryforward: true
+    paths:
+      - app/1/*
+
+  flag_2:
+    carryforward: true
+    paths:
+      - app/2/*
+
+  flag_3:
+    carryforward: true
+    paths:
+      - app/3/*
+
+  flag_4:
+    carryforward: true
+    paths:
+      - app/4/*
+
+  flag_5:
+    carryforward: true
+    paths:
+      - app/5/*
+
+  flag_6:
+    carryforward: true
+    paths:
+      - app/6/*
+
+  flag_7:
+    carryforward: true
+    paths:
+      - app/7/*
+
+  flag_8:
+    carryforward: true
+    paths:
+      - app/8/*
+
+  flag_9:
+    carryforward: true
+    paths:
+      - app/9/*
+
+  flag_10:
+    carryforward: true
+    paths:
+      - app/10/*
+
+  flag_11:
+    carryforward: true
+    paths:
+      - app/11/*
+
+  flag_12:
+    carryforward: true
+    paths:
+      - app/12/*
+
+  flag_13:
+    carryforward: true
+    paths:
+      - app/13/*
+
+  flag_14:
+    carryforward: true
+    paths:
+      - app/14/*
+
+  flag_15:
+    carryforward: true
+    paths:
+      - app/15/*
+
+  flag_16:
+    carryforward: true
+    paths:
+      - app/16/*
+
+  flag_17:
+    carryforward: true
+    paths:
+      - app/17/*
+
+  flag_18:
+    carryforward: true
+    paths:
+      - app/18/*
+
+  flag_19:
+    carryforward: true
+    paths:
+      - app/19/*
+
+  flag_20:
+    carryforward: true
+    paths:
+      - app/20/*
+
+  flag_21:
+    carryforward: true
+    paths:
+      - app/21/*
+
+  flag_22:
+    carryforward: true
+    paths:
+      - app/22/*
+
+  flag_23:
+    carryforward: true
+    paths:
+      - app/23/*
+
+  flag_24:
+    carryforward: true
+    paths:
+      - app/24/*
+
+  flag_25:
+    carryforward: true
+    paths:
+      - app/25/*
+
+  flag_26:
+    carryforward: true
+    paths:
+      - app/26/*
+
+  flag_27:
+    carryforward: true
+    paths:
+      - app/27/*
+
+  flag_28:
+    carryforward: true
+    paths:
+      - app/28/*
+
+  flag_29:
+    carryforward: true
+    paths:
+      - app/29/*
+
+  flag_30:
+    carryforward: true
+    paths:
+      - app/30/*
+
+  flag_31:
+    carryforward: true
+    paths:
+      - app/31/*
+
+  flag_32:
+    carryforward: true
+    paths:
+      - app/32/*
+
+  flag_33:
+    carryforward: true
+    paths:
+      - app/33/*
+
+  flag_34:
+    carryforward: true
+    paths:
+      - app/34/*
+
+  flag_35:
+    carryforward: true
+    paths:
+      - app/35/*
+
+  flag_36:
+    carryforward: true
+    paths:
+      - app/36/*
+
+  flag_37:
+    carryforward: true
+    paths:
+      - app/37/*
+
+  flag_38:
+    carryforward: true
+    paths:
+      - app/38/*
+
+  flag_39:
+    carryforward: true
+    paths:
+      - app/39/*
+
+  flag_40:
+    carryforward: true
+    paths:
+      - app/40/*
+
+  flag_41:
+    carryforward: true
+    paths:
+      - app/41/*
+
+  flag_42:
+    carryforward: true
+    paths:
+      - app/42/*
+
+  flag_43:
+    carryforward: true
+    paths:
+      - app/43/*
+
+  flag_44:
+    carryforward: true
+    paths:
+      - app/44/*
+
+  flag_45:
+    carryforward: true
+    paths:
+      - app/45/*
+
+  flag_46:
+    carryforward: true
+    paths:
+      - app/46/*
+
+  flag_47:
+    carryforward: true
+    paths:
+      - app/47/*
+
+  flag_48:
+    carryforward: true
+    paths:
+      - app/48/*
+
+  flag_49:
+    carryforward: true
+    paths:
+      - app/49/*
+
+  flag_50:
+    carryforward: true
+    paths:
+      - app/50/*
+
+  flag_51:
+    carryforward: true
+    paths:
+      - app/51/*
+
+  flag_52:
+    carryforward: true
+    paths:
+      - app/52/*
+
+  flag_53:
+    carryforward: true
+    paths:
+      - app/53/*
+
+  flag_54:
+    carryforward: true
+    paths:
+      - app/54/*
+
+  flag_55:
+    carryforward: true
+    paths:
+      - app/55/*
+
+  flag_56:
+    carryforward: true
+    paths:
+      - app/56/*
+
+  flag_57:
+    carryforward: true
+    paths:
+      - app/57/*
+
+  flag_58:
+    carryforward: true
+    paths:
+      - app/58/*
+
+  flag_59:
+    carryforward: true
+    paths:
+      - app/59/*
+
+  flag_60:
+    carryforward: true
+    paths:
+      - app/60/*
+
+  flag_61:
+    carryforward: true
+    paths:
+      - app/61/*
+
+  flag_62:
+    carryforward: true
+    paths:
+      - app/62/*
+
+  flag_63:
+    carryforward: true
+    paths:
+      - app/63/*
+
+  flag_64:
+    carryforward: true
+    paths:
+      - app/64/*
+
+  flag_65:
+    carryforward: true
+    paths:
+      - app/65/*
+
+  flag_66:
+    carryforward: true
+    paths:
+      - app/66/*
+
+  flag_67:
+    carryforward: true
+    paths:
+      - app/67/*
+
+  flag_68:
+    carryforward: true
+    paths:
+      - app/68/*
+
+  flag_69:
+    carryforward: true
+    paths:
+      - app/69/*
+
+  flag_70:
+    carryforward: true
+    paths:
+      - app/70/*
+
+  flag_71:
+    carryforward: true
+    paths:
+      - app/71/*
+
+  flag_72:
+    carryforward: true
+    paths:
+      - app/72/*
+
+  flag_73:
+    carryforward: true
+    paths:
+      - app/73/*
+
+  flag_74:
+    carryforward: true
+    paths:
+      - app/74/*
+
+  flag_75:
+    carryforward: true
+    paths:
+      - app/75/*
+
+  flag_76:
+    carryforward: true
+    paths:
+      - app/76/*
+
+  flag_77:
+    carryforward: true
+    paths:
+      - app/77/*
+
+  flag_78:
+    carryforward: true
+    paths:
+      - app/78/*
+
+  flag_79:
+    carryforward: true
+    paths:
+      - app/79/*
+
+  flag_80:
+    carryforward: true
+    paths:
+      - app/80/*
+
+  flag_81:
+    carryforward: true
+    paths:
+      - app/81/*
+
+  flag_82:
+    carryforward: true
+    paths:
+      - app/82/*
+
+  flag_83:
+    carryforward: true
+    paths:
+      - app/83/*
+
+  flag_84:
+    carryforward: true
+    paths:
+      - app/84/*
+
+  flag_85:
+    carryforward: true
+    paths:
+      - app/85/*
+
+  flag_86:
+    carryforward: true
+    paths:
+      - app/86/*
+
+  flag_87:
+    carryforward: true
+    paths:
+      - app/87/*
+
+  flag_88:
+    carryforward: true
+    paths:
+      - app/88/*
+
+  flag_89:
+    carryforward: true
+    paths:
+      - app/89/*
+
+  flag_90:
+    carryforward: true
+    paths:
+      - app/90/*
+
+  flag_91:
+    carryforward: true
+    paths:
+      - app/91/*
+
+  flag_92:
+    carryforward: true
+    paths:
+      - app/92/*
+
+  flag_93:
+    carryforward: true
+    paths:
+      - app/93/*
+
+  flag_94:
+    carryforward: true
+    paths:
+      - app/94/*
+
+  flag_95:
+    carryforward: true
+    paths:
+      - app/95/*
+
+  flag_96:
+    carryforward: true
+    paths:
+      - app/96/*
+
+  flag_97:
+    carryforward: true
+    paths:
+      - app/97/*
+
+  flag_98:
+    carryforward: true
+    paths:
+      - app/98/*
+
+  flag_99:
+    carryforward: true
+    paths:
+      - app/99/*
+
+  flag_100:
+    carryforward: true
+    paths:
+      - app/100/*
