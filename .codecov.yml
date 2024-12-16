@@ -23,13 +23,9 @@ flags:
 
   flag_1:
     carryforward: true
-    paths:
-      - app/1/*
 
   flag_2:
     carryforward: true
-    paths:
-      - app/2/*
 
   flag_3:
     carryforward: true
