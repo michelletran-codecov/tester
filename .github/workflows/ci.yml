@@ -14,13 +14,15 @@ jobs:
           python-version: '3.10'
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Install CLI
+        run: pip install --no-cache-dir codecov-cli
       - name: Run tests and collect coverage
-        run: pytest --cov .
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
-        with:
-          flags: smart-tests
-          verbose: true
-          url: ${{ secrets.CODECOV_URL }}
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        run: COVERAGE_CORE=sysmon python -m pytest --cov=./ --junitxml=junit.xml
+      - name: Run Startup Staging
+        run: |
+          CODECOV_TOKEN=${{ secrets.CODECOV_ORG_TOKEN_STAGING }} codecovcli -u ${{ secrets.CODECOV_STAGING_URL }} create-commit --fail-on-error
+          CODECOV_TOKEN=${{ secrets.CODECOV_ORG_TOKEN_STAGING }} codecovcli -u ${{ secrets.CODECOV_STAGING_URL }} create-report --fail-on-error
+      - name: upload using codecovcli staging
+        if: ${{ !github.event.pull_request.head.repo.fork }}
+        run: |
+          CODECOV_TOKEN=${{ secrets.CODECOV_ORG_TOKEN_STAGING }} codecovcli -u ${{ secrets.CODECOV_STAGING_URL }} do-upload --fail-on-error
