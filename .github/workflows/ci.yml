@@ -24,3 +24,5 @@ jobs:
           url: ${{ secrets.CODECOV_URL }}
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      - name: Run another line
+        run: echo "Hello World"
